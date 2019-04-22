@@ -1,12 +1,8 @@
-
 import 'package:flutter/material.dart';
 
-
 class SplashScreenWidget extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
       body: Container(
         constraints: BoxConstraints.expand(),
@@ -19,6 +15,7 @@ class SplashScreenWidget extends StatelessWidget {
             Positioned(
               left: 0,
               right: 0,
+              top: 0,
               child: Container(
                 height: 812,
                 child: Image.asset(

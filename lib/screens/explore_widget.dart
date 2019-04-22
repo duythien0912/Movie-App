@@ -1,12 +1,8 @@
-
 import 'package:flutter/material.dart';
 
-
 class ExploreWidget extends StatelessWidget {
-  
   @override
   Widget build(BuildContext context) {
-  
     return Scaffold(
       body: Container(
         constraints: BoxConstraints.expand(),
@@ -19,6 +15,7 @@ class ExploreWidget extends StatelessWidget {
             Positioned(
               left: 0,
               right: 0,
+              top: 0,
               child: Container(
                 height: 812,
                 child: Image.asset(
@@ -69,7 +66,8 @@ class ExploreWidget extends StatelessWidget {
                                         child: Text(
                                           "POD",
                                           style: TextStyle(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255),
                                             fontSize: 18,
                                             fontFamily: "Poppins ExtraBold",
                                             fontWeight: FontWeight.w800,
@@ -84,7 +82,8 @@ class ExploreWidget extends StatelessWidget {
                                         child: Text(
                                           "CASTR",
                                           style: TextStyle(
-                                            color: Color.fromARGB(255, 255, 255, 255),
+                                            color: Color.fromARGB(
+                                                255, 255, 255, 255),
                                             fontSize: 14,
                                             fontFamily: "Poppins",
                                             fontWeight: FontWeight.w700,
@@ -203,7 +202,8 @@ class ExploreWidget extends StatelessWidget {
                                 Container(
                                   height: 183,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
                                     children: [
                                       Align(
                                         alignment: Alignment.topLeft,
@@ -211,7 +211,8 @@ class ExploreWidget extends StatelessWidget {
                                           width: 100,
                                           height: 183,
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.stretch,
                                             children: [
                                               Container(
                                                 height: 139,
@@ -223,7 +224,8 @@ class ExploreWidget extends StatelessWidget {
                                               Spacer(),
                                               Container(
                                                 height: 37,
-                                                margin: EdgeInsets.only(right: 6),
+                                                margin:
+                                                    EdgeInsets.only(right: 6),
                                                 child: Stack(
                                                   alignment: Alignment.center,
                                                   children: [
@@ -234,12 +236,18 @@ class ExploreWidget extends StatelessWidget {
                                                       child: Text(
                                                         "ART & DESIGN",
                                                         style: TextStyle(
-                                                          color: Color.fromARGB(255, 230, 230, 230),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              230,
+                                                              230,
+                                                              230),
                                                           fontSize: 14,
                                                           fontFamily: "Poppins",
-                                                          fontWeight: FontWeight.w700,
+                                                          fontWeight:
+                                                              FontWeight.w700,
                                                         ),
-                                                        textAlign: TextAlign.left,
+                                                        textAlign:
+                                                            TextAlign.left,
                                                       ),
                                                     ),
                                                     Positioned(
@@ -250,12 +258,20 @@ class ExploreWidget extends StatelessWidget {
                                                         child: Text(
                                                           "208",
                                                           style: TextStyle(
-                                                            color: Color.fromARGB(255, 232, 232, 232),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    232,
+                                                                    232,
+                                                                    232),
                                                             fontSize: 12,
-                                                            fontFamily: "Poppins SemiBold",
-                                                            fontWeight: FontWeight.w600,
+                                                            fontFamily:
+                                                                "Poppins SemiBold",
+                                                            fontWeight:
+                                                                FontWeight.w600,
                                                           ),
-                                                          textAlign: TextAlign.left,
+                                                          textAlign:
+                                                              TextAlign.left,
                                                         ),
                                                       ),
                                                     ),
@@ -273,7 +289,8 @@ class ExploreWidget extends StatelessWidget {
                                           width: 100,
                                           height: 183,
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.stretch,
                                             children: [
                                               Container(
                                                 height: 139,
@@ -285,7 +302,8 @@ class ExploreWidget extends StatelessWidget {
                                               Spacer(),
                                               Container(
                                                 height: 37,
-                                                margin: EdgeInsets.only(right: 17),
+                                                margin:
+                                                    EdgeInsets.only(right: 17),
                                                 child: Stack(
                                                   alignment: Alignment.center,
                                                   children: [
@@ -296,12 +314,18 @@ class ExploreWidget extends StatelessWidget {
                                                       child: Text(
                                                         "EDUCATION",
                                                         style: TextStyle(
-                                                          color: Color.fromARGB(255, 230, 230, 230),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              230,
+                                                              230,
+                                                              230),
                                                           fontSize: 14,
                                                           fontFamily: "Poppins",
-                                                          fontWeight: FontWeight.w700,
+                                                          fontWeight:
+                                                              FontWeight.w700,
                                                         ),
-                                                        textAlign: TextAlign.left,
+                                                        textAlign:
+                                                            TextAlign.left,
                                                       ),
                                                     ),
                                                     Positioned(
@@ -312,12 +336,20 @@ class ExploreWidget extends StatelessWidget {
                                                         child: Text(
                                                           "1.5K",
                                                           style: TextStyle(
-                                                            color: Color.fromARGB(255, 232, 232, 232),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    232,
+                                                                    232,
+                                                                    232),
                                                             fontSize: 12,
-                                                            fontFamily: "Poppins SemiBold",
-                                                            fontWeight: FontWeight.w600,
+                                                            fontFamily:
+                                                                "Poppins SemiBold",
+                                                            fontWeight:
+                                                                FontWeight.w600,
                                                           ),
-                                                          textAlign: TextAlign.left,
+                                                          textAlign:
+                                                              TextAlign.left,
                                                         ),
                                                       ),
                                                     ),
@@ -335,7 +367,8 @@ class ExploreWidget extends StatelessWidget {
                                 Container(
                                   height: 183,
                                   child: Row(
-                                    crossAxisAlignment: CrossAxisAlignment.stretch,
+                                    crossAxisAlignment:
+                                        CrossAxisAlignment.stretch,
                                     children: [
                                       Align(
                                         alignment: Alignment.bottomLeft,
@@ -343,7 +376,8 @@ class ExploreWidget extends StatelessWidget {
                                           width: 100,
                                           height: 183,
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.stretch,
                                             children: [
                                               Container(
                                                 height: 139,
@@ -367,12 +401,20 @@ class ExploreWidget extends StatelessWidget {
                                                         child: Text(
                                                           "FITNESS",
                                                           style: TextStyle(
-                                                            color: Color.fromARGB(255, 230, 230, 230),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    230,
+                                                                    230,
+                                                                    230),
                                                             fontSize: 14,
-                                                            fontFamily: "Poppins",
-                                                            fontWeight: FontWeight.w700,
+                                                            fontFamily:
+                                                                "Poppins",
+                                                            fontWeight:
+                                                                FontWeight.w700,
                                                           ),
-                                                          textAlign: TextAlign.left,
+                                                          textAlign:
+                                                              TextAlign.left,
                                                         ),
                                                       ),
                                                       Positioned(
@@ -383,12 +425,21 @@ class ExploreWidget extends StatelessWidget {
                                                           child: Text(
                                                             "208",
                                                             style: TextStyle(
-                                                              color: Color.fromARGB(255, 232, 232, 232),
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      232,
+                                                                      232,
+                                                                      232),
                                                               fontSize: 12,
-                                                              fontFamily: "Poppins SemiBold",
-                                                              fontWeight: FontWeight.w600,
+                                                              fontFamily:
+                                                                  "Poppins SemiBold",
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
                                                             ),
-                                                            textAlign: TextAlign.left,
+                                                            textAlign:
+                                                                TextAlign.left,
                                                           ),
                                                         ),
                                                       ),
@@ -407,7 +458,8 @@ class ExploreWidget extends StatelessWidget {
                                           width: 100,
                                           height: 183,
                                           child: Column(
-                                            crossAxisAlignment: CrossAxisAlignment.stretch,
+                                            crossAxisAlignment:
+                                                CrossAxisAlignment.stretch,
                                             children: [
                                               Container(
                                                 height: 139,
@@ -431,12 +483,20 @@ class ExploreWidget extends StatelessWidget {
                                                         child: Text(
                                                           "FASHION",
                                                           style: TextStyle(
-                                                            color: Color.fromARGB(255, 230, 230, 230),
+                                                            color:
+                                                                Color.fromARGB(
+                                                                    255,
+                                                                    230,
+                                                                    230,
+                                                                    230),
                                                             fontSize: 14,
-                                                            fontFamily: "Poppins",
-                                                            fontWeight: FontWeight.w700,
+                                                            fontFamily:
+                                                                "Poppins",
+                                                            fontWeight:
+                                                                FontWeight.w700,
                                                           ),
-                                                          textAlign: TextAlign.left,
+                                                          textAlign:
+                                                              TextAlign.left,
                                                         ),
                                                       ),
                                                       Positioned(
@@ -447,12 +507,21 @@ class ExploreWidget extends StatelessWidget {
                                                           child: Text(
                                                             "1.5K",
                                                             style: TextStyle(
-                                                              color: Color.fromARGB(255, 232, 232, 232),
+                                                              color: Color
+                                                                  .fromARGB(
+                                                                      255,
+                                                                      232,
+                                                                      232,
+                                                                      232),
                                                               fontSize: 12,
-                                                              fontFamily: "Poppins SemiBold",
-                                                              fontWeight: FontWeight.w600,
+                                                              fontFamily:
+                                                                  "Poppins SemiBold",
+                                                              fontWeight:
+                                                                  FontWeight
+                                                                      .w600,
                                                             ),
-                                                            textAlign: TextAlign.left,
+                                                            textAlign:
+                                                                TextAlign.left,
                                                           ),
                                                         ),
                                                       ),
@@ -484,7 +553,8 @@ class ExploreWidget extends StatelessWidget {
                                       width: 100,
                                       height: 183,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.stretch,
                                         children: [
                                           Container(
                                             height: 142,
@@ -508,10 +578,12 @@ class ExploreWidget extends StatelessWidget {
                                                     child: Text(
                                                       "MUSIC",
                                                       style: TextStyle(
-                                                        color: Color.fromARGB(255, 230, 230, 230),
+                                                        color: Color.fromARGB(
+                                                            255, 230, 230, 230),
                                                         fontSize: 14,
                                                         fontFamily: "Poppins",
-                                                        fontWeight: FontWeight.w700,
+                                                        fontWeight:
+                                                            FontWeight.w700,
                                                       ),
                                                       textAlign: TextAlign.left,
                                                     ),
@@ -524,12 +596,19 @@ class ExploreWidget extends StatelessWidget {
                                                       child: Text(
                                                         "2.5K",
                                                         style: TextStyle(
-                                                          color: Color.fromARGB(255, 232, 232, 232),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              232,
+                                                              232,
+                                                              232),
                                                           fontSize: 12,
-                                                          fontFamily: "Poppins SemiBold",
-                                                          fontWeight: FontWeight.w600,
+                                                          fontFamily:
+                                                              "Poppins SemiBold",
+                                                          fontWeight:
+                                                              FontWeight.w600,
                                                         ),
-                                                        textAlign: TextAlign.left,
+                                                        textAlign:
+                                                            TextAlign.left,
                                                       ),
                                                     ),
                                                   ),
@@ -548,7 +627,8 @@ class ExploreWidget extends StatelessWidget {
                                       width: 100,
                                       height: 183,
                                       child: Column(
-                                        crossAxisAlignment: CrossAxisAlignment.stretch,
+                                        crossAxisAlignment:
+                                            CrossAxisAlignment.stretch,
                                         children: [
                                           Container(
                                             height: 139,
@@ -572,10 +652,12 @@ class ExploreWidget extends StatelessWidget {
                                                     child: Text(
                                                       "FOOD",
                                                       style: TextStyle(
-                                                        color: Color.fromARGB(255, 230, 230, 230),
+                                                        color: Color.fromARGB(
+                                                            255, 230, 230, 230),
                                                         fontSize: 14,
                                                         fontFamily: "Poppins",
-                                                        fontWeight: FontWeight.w700,
+                                                        fontWeight:
+                                                            FontWeight.w700,
                                                       ),
                                                       textAlign: TextAlign.left,
                                                     ),
@@ -588,12 +670,19 @@ class ExploreWidget extends StatelessWidget {
                                                       child: Text(
                                                         "2.5K",
                                                         style: TextStyle(
-                                                          color: Color.fromARGB(255, 232, 232, 232),
+                                                          color: Color.fromARGB(
+                                                              255,
+                                                              232,
+                                                              232,
+                                                              232),
                                                           fontSize: 12,
-                                                          fontFamily: "Poppins SemiBold",
-                                                          fontWeight: FontWeight.w600,
+                                                          fontFamily:
+                                                              "Poppins SemiBold",
+                                                          fontWeight:
+                                                              FontWeight.w600,
                                                         ),
-                                                        textAlign: TextAlign.left,
+                                                        textAlign:
+                                                            TextAlign.left,
                                                       ),
                                                     ),
                                                   ),
