@@ -5,6 +5,8 @@ import 'package:pod_castr/navbar/list_fim.dart';
 import 'package:pod_castr/navbar/bottom_nav_bar.dart';
 
 class ExploreWidget extends StatelessWidget {
+  void onSearchPressed(BuildContext context) {}
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -104,9 +106,14 @@ class ExploreWidget extends StatelessWidget {
                         Container(
                           width: 41,
                           height: 41,
-                          child: Image.asset(
-                            "assets/images/search-.png",
-                            fit: BoxFit.none,
+                          child: FlatButton(
+                            onPressed: () => this.onSearchPressed(context),
+                            color: Colors.transparent,
+                            textColor: Color.fromARGB(255, 0, 0, 0),
+                            padding: EdgeInsets.all(0),
+                            child: Image.asset(
+                              "assets/images/search-.png",
+                            ),
                           ),
                         ),
                       ],
@@ -159,18 +166,26 @@ class ExploreWidget extends StatelessWidget {
                     child: Row(
                       children: [
                         Container(
+                          width: 154,
+                          height: 22,
                           margin: EdgeInsets.only(left: 30),
                           child: Opacity(
-                            opacity: 0.4,
-                            child: Text(
-                              "Search All Podcasts",
+                            opacity: 0.8,
+                            child: TextField(
+                              decoration: InputDecoration(
+                                hintText: "Search All Podcasts",
+                                hintStyle: TextStyle(
+                                    color: Color.fromARGB(102, 255, 255, 255)),
+                                contentPadding: EdgeInsets.all(0),
+                                border: InputBorder.none,
+                              ),
                               style: TextStyle(
                                 color: Color.fromARGB(255, 255, 255, 255),
                                 fontSize: 14,
-                                letterSpacing: -0.3,
                                 fontFamily: "Poppins",
                               ),
-                              textAlign: TextAlign.left,
+                              maxLines: 1,
+                              autocorrect: false,
                             ),
                           ),
                         ),
