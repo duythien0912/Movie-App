@@ -2,10 +2,13 @@ import 'package:flutter/material.dart';
 
 import 'package:pod_castr/navbar/list_fim.dart';
 
+import 'package:pod_castr/navbar/bottom_nav_bar.dart';
+
 class ExploreWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      bottomNavigationBar: bottomNavBar,
       body: Container(
         constraints: BoxConstraints.expand(),
         decoration: BoxDecoration(
@@ -187,14 +190,6 @@ class ExploreWidget extends StatelessWidget {
                       ],
                     ),
                   ),
-                  // Expanded(
-                  //   // child: Text("🌎"),
-                  //   child: new GridView.count(
-                  //       crossAxisCount: 3,
-                  //       children: <String>["🌎", "🌎"].map((String title) {
-                  //         return new GridTile(child: new Text(title));
-                  //       }).toList()),
-                  // ),
                   Spacer(),
                   ListFim(),
                   Spacer(),

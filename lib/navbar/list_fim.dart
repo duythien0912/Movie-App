@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-List<Map<String, dynamic>> ListMovie = [
+List<Map<String, dynamic>> _listMovie = [
   {"url": "assets/images/bitmap.png", "title": ""},
   {"url": "assets/images/bitmap-2.png", "title": ""},
   {"url": "assets/images/bitmap-3.png", "title": ""},
@@ -23,7 +23,7 @@ class ListFim extends StatelessWidget {
           padding: const EdgeInsets.all(8),
           mainAxisSpacing: 20.0,
           // crossAxisSpacing: 1.0,
-          children: ListMovie.map((item) {
+          children: _listMovie.map((item) {
             return new GridTile(
                 child: Container(
               child: Image.asset(
