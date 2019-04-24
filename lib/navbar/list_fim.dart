@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:pod_castr/screens/detail_screen_widget.dart';
+
 class FimList {
   List<Fim> fims;
   FimList({@required this.fims});
@@ -64,6 +66,9 @@ class ListofFim extends StatelessWidget {
 
   final String name;
 
+  void onSubmitMovieDetailButtonPressed(BuildContext context) => Navigator.push(
+      context, MaterialPageRoute(builder: (context) => DetailMovieWidget()));
+
   @override
   Widget build(BuildContext context) {
     return Row(
@@ -73,9 +78,14 @@ class ListofFim extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(
-                // height: 180,
-                child: Image.asset(image),
+              OutlineButton(
+                onPressed: () => this.onSubmitMovieDetailButtonPressed(context),
+                child: SizedBox(
+                  // height: 180,
+                  child: Image.asset(image),
+                ),
+                borderSide: BorderSide(color: Colors.transparent),
+                // shape: StadiumBorder(),
               ),
               Text(
                 name,

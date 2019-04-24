@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pod_castr/screens/login_screen_widget.dart';
+import 'package:pod_castr/screens/detail_screen_widget.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(App());
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
     ));
 
     return MaterialApp(
-      home: LoginScreenWidget(),
+      home: DetailMovieWidget(),
       debugShowCheckedModeBanner: false,
     );
   }
