@@ -142,6 +142,9 @@ class InfoMovie extends StatelessWidget {
           new DetailMovie(textContent: description),
           new TitleBlockText(title: TitleBlockEps),
           new EpisodesMovie(),
+          new Padding(
+            padding: const EdgeInsets.only(bottom: 30),
+          ),
         ],
       ),
     );
@@ -156,11 +159,14 @@ class EpisodesMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      margin: EdgeInsets.only(top: 15, left: 20),
+      margin: EdgeInsets.only(top: 15),
       height: 120,
       child: ListView(
         scrollDirection: Axis.horizontal,
         children: <Widget>[
+          new Padding(
+            padding: const EdgeInsets.only(left: 20),
+          ),
           new EpisodesItem(),
           new EpisodesItem(),
           new EpisodesItem(),
@@ -181,7 +187,7 @@ class EpisodesItem extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(right: 15, top: 0),
+      padding: const EdgeInsets.only(right: 20, top: 0),
       child: Container(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
