@@ -55,27 +55,6 @@ class ImagePreviewCorver extends StatelessWidget {
                 height: screenHeight * 0.45,
               ),
             ),
-            // Positioned(
-            //   left: 0,
-            //   top: 0,
-            //   right: 0,
-            //   child: Container(
-            //     // decoration: BoxDecoration(
-            //     //   boxShadow: [
-            //     //     BoxShadow(
-            //     //       color: Color.fromARGB(128, 7, 80, 215),
-            //     //       offset: Offset(0, -30),
-            //     //       blurRadius: 30,
-            //     //     ),
-            //     //   ],
-            //     // ),
-            //     height: screenHeight * 0.45,
-            //     child: Image.asset(
-            //       "assets/images/moviepre.png",
-            //       fit: BoxFit.cover,
-            //     ),
-            //   ),
-            // ),
             Positioned(
               left: 20,
               top: screenHeight * 0.4,
@@ -140,6 +119,10 @@ class ImagePreviewCorver extends StatelessWidget {
 
 class InfoMovie extends StatelessWidget {
   InfoMovie({@required this.screenHeight});
+  final String description =
+      "Jon and Daenerys arrive in Winterfell and are met with skepticism. Sam learns about the fate of his family. Cersei gives Euron the reward he aims for.";
+  final String TitleBlockDes = "About";
+  final String TitleBlockEps = "Episodes";
 
   final double screenHeight;
 
@@ -150,13 +133,213 @@ class InfoMovie extends StatelessWidget {
     return Container(
       width: double.infinity,
       // padding: EdgeInsets.all(0),
-      padding: EdgeInsets.only(top: screenHeight * 0.4, left: 0),
+      padding: EdgeInsets.only(top: screenHeight * 0.45, left: 0),
       child: ListView(
         children: <Widget>[
           new RatingMovie(),
           new EpMovie(),
+          new TitleBlockText(title: TitleBlockDes),
+          new DetailMovie(textContent: description),
+          new TitleBlockText(title: TitleBlockEps),
+          new EpisodesMovie(),
         ],
       ),
+    );
+  }
+}
+
+class EpisodesMovie extends StatelessWidget {
+  const EpisodesMovie({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      margin: EdgeInsets.only(top: 15, left: 20),
+      height: 120,
+      child: ListView(
+        scrollDirection: Axis.horizontal,
+        children: <Widget>[
+          new EpisodesItem(),
+          new EpisodesItem(),
+          new EpisodesItem(),
+          new EpisodesItem(),
+          new EpisodesItem(),
+          new EpisodesItem(),
+        ],
+      ),
+    );
+  }
+}
+
+class EpisodesItem extends StatelessWidget {
+  const EpisodesItem({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(right: 15, top: 0),
+      child: Container(
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Image.asset(
+              "assets/images/image-preview-6.png",
+              fit: BoxFit.cover,
+            ),
+            Spacer(),
+            Text(
+              "1. Winterfell ",
+              style: TextStyle(
+                color: Color.fromARGB(255, 6, 96, 219),
+                fontSize: 10,
+                letterSpacing: 0.14,
+                fontFamily: "Poppins SemiBold",
+                fontWeight: FontWeight.w600,
+              ),
+              textAlign: TextAlign.left,
+            ),
+            Text(
+              "101 min",
+              style: TextStyle(
+                color: Color.fromARGB(255, 119, 137, 181),
+                fontSize: 10,
+                letterSpacing: 0.14,
+                fontFamily: "Poppins",
+              ),
+              textAlign: TextAlign.left,
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class TitleBlockText extends StatelessWidget {
+  final String title;
+
+  const TitleBlockText({
+    @required this.title,
+    Key key,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 20, bottom: 0),
+      child: Text(
+        title,
+        style: TextStyle(
+          color: Color.fromARGB(255, 54, 66, 95),
+          fontSize: 14,
+          letterSpacing: 0.2,
+          fontFamily: "Poppins SemiBold",
+          fontWeight: FontWeight.w600,
+        ),
+        textAlign: TextAlign.left,
+      ),
+    );
+  }
+}
+
+class DetailMovie extends StatefulWidget {
+  final String textContent;
+
+  const DetailMovie({
+    @required this.textContent,
+    Key key,
+  }) : super(key: key);
+
+  @override
+  _DetailMovieState createState() => _DetailMovieState();
+}
+
+class _DetailMovieState extends State<DetailMovie> {
+  String firstHalf;
+  String secondHalf;
+
+  bool flag = true;
+
+  @override
+  void initState() {
+    super.initState();
+
+    if (widget.textContent.length > 100) {
+      firstHalf = widget.textContent.substring(0, 100);
+      secondHalf = widget.textContent.substring(100, widget.textContent.length);
+    } else {
+      firstHalf = widget.textContent;
+      secondHalf = "";
+    }
+  }
+
+  Widget build(BuildContext context) {
+    return Padding(
+      padding: const EdgeInsets.only(top: 5, left: 20, right: 10),
+      child: (secondHalf?.isEmpty ?? null)
+          ? new Text(
+              firstHalf,
+              style: TextStyle(
+                color: Color.fromARGB(255, 120, 137, 181),
+                fontSize: 10,
+                letterSpacing: 0.14,
+                fontFamily: "Poppins",
+              ),
+              textAlign: TextAlign.left,
+            )
+          : new Column(
+              children: <Widget>[
+                new Text(
+                  flag ? (firstHalf + "...") : (firstHalf + secondHalf),
+                  style: TextStyle(
+                    color: Color.fromARGB(255, 120, 137, 181),
+                    fontSize: 10,
+                    letterSpacing: 0.14,
+                    fontFamily: "Poppins",
+                  ),
+                  textAlign: TextAlign.left,
+                ),
+                new InkWell(
+                  child: new Row(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: new Text(
+                          flag ? "More" : "Hide",
+                          style: new TextStyle(
+                            color: Color.fromARGB(255, 6, 96, 219),
+                            fontSize: 11,
+                            letterSpacing: 0.14,
+                            fontFamily: "Poppins SemiBold",
+                            fontWeight: FontWeight.w600,
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                  onTap: () {
+                    setState(() {
+                      flag = !flag;
+                    });
+                  },
+                ),
+              ],
+            ),
+
+      // Text(
+      //   "",
+      //   style: TextStyle(
+      //     color: Color.fromARGB(255, 120, 137, 181),
+      //     fontSize: 10,
+      //     letterSpacing: 0.14,
+      //     fontFamily: "Poppins",
+      //   ),
+      //   textAlign: TextAlign.left,
+      // ),
     );
   }
 }
@@ -169,7 +352,7 @@ class EpMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 30,
+      height: 35,
       margin: EdgeInsets.only(top: 15),
       child: ListView(
         scrollDirection: Axis.horizontal,
@@ -273,7 +456,7 @@ class RatingMovie extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 20, left: 20),
+      padding: const EdgeInsets.only(top: 0, left: 20),
       child: Container(
         alignment: Alignment.topLeft,
         child: Column(
