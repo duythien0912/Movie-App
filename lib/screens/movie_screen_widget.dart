@@ -436,7 +436,7 @@ class ImageHotMovie extends StatelessWidget {
             "Game of thrones season 8 ep 2",
             style: TextStyle(
               color: Color.fromARGB(255, 255, 255, 255),
-              fontSize: 12,
+              fontSize: 13,
               letterSpacing: 0.38,
               fontFamily: "Poppins",
               fontWeight: FontWeight.w700,
