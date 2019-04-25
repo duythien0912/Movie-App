@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:pod_castr/screens/detail_screen_widget.dart';
+import 'package:pod_castr/screens/movie_screen_widget.dart';
 import 'package:flutter/services.dart';
 
 void main() => runApp(App());
@@ -12,7 +12,7 @@ class App extends StatelessWidget {
     ));
 
     return MaterialApp(
-      home: DetailMovieWidget(),
+      home: MovieScreen(),
       debugShowCheckedModeBanner: false,
     );
   }

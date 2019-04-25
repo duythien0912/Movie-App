@@ -18,7 +18,7 @@ class ImagePreviewCorver extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     var screenHeight = MediaQuery.of(context).size.height;
-    var screenwidth = MediaQuery.of(context).size.width;
+    // var screenwidth = MediaQuery.of(context).size.width;
 
     return Stack(
       alignment: Alignment.center,
@@ -121,8 +121,8 @@ class InfoMovie extends StatelessWidget {
   InfoMovie({@required this.screenHeight});
   final String description =
       "Jon and Daenerys arrive in Winterfell and are met with skepticism. Sam learns about the fate of his family. Cersei gives Euron the reward he aims for.";
-  final String TitleBlockDes = "About";
-  final String TitleBlockEps = "Episodes";
+  final String titleBlockDes = "About";
+  final String titleBlockEps = "Episodes";
 
   final double screenHeight;
 
@@ -138,9 +138,9 @@ class InfoMovie extends StatelessWidget {
         children: <Widget>[
           new RatingMovie(),
           new EpMovie(),
-          new TitleBlockText(title: TitleBlockDes),
+          new TitleBlockText(title: titleBlockDes),
           new DetailMovie(textContent: description),
-          new TitleBlockText(title: TitleBlockEps),
+          new TitleBlockText(title: titleBlockEps),
           new EpisodesMovie(),
           new Padding(
             padding: const EdgeInsets.only(bottom: 30),
